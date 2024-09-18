@@ -24,7 +24,11 @@ jobs:
     - name: Docker build and push
       run: |
         TAG=ghcr.io/john2143/better_gha_runner:${{ github.run_number }}
+        TAL=ghcr.io/john2143/better_gha_runner:latest
+
         docker build -t b . --label "runnumber=${{ github.run_number }}"
         docker tag b $TAG
+        docker tag b $TAL
         docker push $TAG
+        docker push $TAL
 
