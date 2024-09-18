@@ -4,8 +4,9 @@ RUN sudo apt-get update
 RUN sudo apt-get install -y git bash jq busybox curl 
 RUN sudo apt-get install -y unzip zip tar gzip
 RUN sudo apt-get install -y awscli
-RUN sudo apt-get install -y golang snap
-RUN snap install yq
+RUN sudo apt-get install -y golang wget
+RUN wget https://github.com/mikefarah/yq/releases/download/v4.44.3/yq_linux_amd64.tar.gz -O - | sudo tar xz && sudo mv yq_linux_amd64 /usr/bin/yq
+RUN yq --version
 RUN sudo apt-get install -y python3 python3-pip
 
 RUN sudo apt-get install -y nodejs npm
