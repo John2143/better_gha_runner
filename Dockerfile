@@ -13,7 +13,6 @@ RUN sudo apt-get install -y nodejs npm
 RUN sudo apt-get install -y docker.io
 RUN sudo apt-get install -y gnupg2
 
-RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-RUN rustup update
-RUN rustup default stable
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --profile default -y
+ENV PATH="/home/runner/.cargo/bin:${PATH}"
 RUN cargo --version
