@@ -16,3 +16,5 @@ RUN sudo apt-get install -y gnupg2
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --profile default -y
 ENV PATH="/home/runner/.cargo/bin:${PATH}"
 RUN cargo --version
+
+RUN sudo apt-get install -y build-essential cmake pkg-config
