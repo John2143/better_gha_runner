@@ -18,3 +18,4 @@ ENV PATH="/home/runner/.cargo/bin:${PATH}"
 RUN cargo --version
 
 RUN sudo apt-get install -y build-essential cmake pkg-config
+RUN sudo apt-get install -y ripgrep
