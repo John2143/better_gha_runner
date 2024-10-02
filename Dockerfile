@@ -19,3 +19,5 @@ RUN cargo --version
 
 RUN sudo apt-get install -y build-essential cmake pkg-config
 RUN sudo apt-get install -y ripgrep
+
+RUN sudo apt-get install -y s3cmd
