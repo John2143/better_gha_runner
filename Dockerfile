@@ -1,7 +1,7 @@
 FROM ghcr.io/actions/actions-runner:2.319.1
 
 RUN sudo apt-get update
-RUN sudo apt-get install -y git bash jq busybox curl 
+RUN sudo apt-get install -y git bash jq busybox curl
 RUN sudo apt-get install -y unzip zip tar gzip
 RUN sudo apt-get install -y awscli
 RUN sudo apt-get install -y golang wget
@@ -21,3 +21,4 @@ RUN sudo apt-get install -y build-essential cmake pkg-config
 RUN sudo apt-get install -y ripgrep
 
 RUN sudo apt-get install -y s3cmd
+RUN sudo apt-get install -y fish
